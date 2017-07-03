@@ -2,7 +2,7 @@ package com.hanbit.oop.controller;
 import javax.swing.JOptionPane;
 
 import com.hanbit.oop.domain.GradeBean;
-import com.hanbit.oop.service.GradeService;
+import com.hanbit.oop.serviceImpl.GradeService;
 public class GradeController{
 	public static void main(String[] args) {
 		GradeService service=new GradeService();

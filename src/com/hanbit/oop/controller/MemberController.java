@@ -3,12 +3,14 @@ package com.hanbit.oop.controller;
 import java.util.Scanner;
 import com.hanbit.oop.domain.MemberBean;
 import com.hanbit.oop.service.MemberService;
+import com.hanbit.oop.serviceImpl.MemberServiceImpl;
+
 import javax.swing.*;
 
 public class MemberController {
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);
-		MemberService ms=new MemberService();
+		MemberService ms=new MemberServiceImpl();
 		MemberBean member=new MemberBean();
 		while(true){
 			switch (JOptionPane.showInputDialog("0.종료 1.회원등록 2.로그인")) {
