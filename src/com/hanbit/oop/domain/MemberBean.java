@@ -26,7 +26,9 @@ public class MemberBean {
 	public String getName(){
 		return name;
 	}
-	public String toString(){
-		return "";
+	@Override
+	public String toString() {
+		return "회원 [id=" + id + ", pw=" + pw + ", ssn=" + ssn + ", name=" + name + "]";
 	}
+	
 }

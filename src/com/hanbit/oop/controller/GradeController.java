@@ -2,10 +2,10 @@ package com.hanbit.oop.controller;
 import javax.swing.JOptionPane;
 
 import com.hanbit.oop.domain.GradeBean;
-import com.hanbit.oop.serviceImpl.GradeService;
+import com.hanbit.oop.serviceImpl.GradeServiceImpl;
 public class GradeController{
 	public static void main(String[] args) {
-		GradeService service=new GradeService();
+		GradeServiceImpl service=new GradeServiceImpl();
 		GradeBean grade=new GradeBean();
 		while (true) {
 			switch (JOptionPane.showInputDialog("0.stop 1.grade")) {
