@@ -8,4 +8,5 @@ public interface AdminService {
 	public int countMembers();
 	public MemberBean findById(String id);
 	public MemberBean[] findByName(String name);
+	public void updatePass(MemberBean member);
 }

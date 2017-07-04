@@ -38,16 +38,44 @@ public class AdminServiceImpl implements AdminService{
 		for(int i=0;i<list.length;i++){
 			if(id.equals(list[i].getId())){
 				member=list[i];
+				
 			}
 		}
 		return member;
 	}
 	@Override
 	public MemberBean[] findByName(String name) {
+		int x=0;
+		for(int i=0;i<list.length;i++){
+			if(name.equals(list[i].getName())){
+				x++;
+			}
+		}
+		MemberBean[] members=new MemberBean[x];
+		int j=0;
+		for(int i=0;i<list.length;i++){
+			if(name.equals(list[i].getName())){
+				members[j]=list[i];
+				j++;
+			}
+			if(x==j){
+				break;
+			}
+		}
+		return members;
+	}
+	@Override
+	public void updatePass(MemberBean member) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
+	
+	
+	
+	
+	
+	
 	
 	
 	

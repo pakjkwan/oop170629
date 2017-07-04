@@ -14,7 +14,7 @@ public class AdminController {
 		MemberBean member=null;
 		String sList="";
 		while(true){
-			switch (JOptionPane.showInputDialog("0.exit 1.add 2.count 3.list 4.findById 5.findByName")) {
+			switch (JOptionPane.showInputDialog("0.exit 1.add 2.count 3.list 4.findById 5.findByName 6.update")) {
 			case "0":return;
 			case "1":
 				member=new MemberBean();
@@ -43,7 +43,19 @@ public class AdminController {
 				JOptionPane.showMessageDialog(null, service.findById(JOptionPane.showInputDialog("검색 아이디 입력: ")).toString());
 				break;
 				
-				
+			case "5":
+				String name=JOptionPane.showInputDialog("조회할 이름을 입력하세요");
+				MemberBean[] members=service.findByName(name);
+				String result="";
+				if(members.length==0){
+					result="조회할 이름이 없습니다.";
+				}else{
+					for(int i=0;i<members.length;i++){
+						result+=members[i].toString()+"\n";
+					}
+				}
+				JOptionPane.showMessageDialog(null,result);
+				break;
 
 			default:
 				break;
